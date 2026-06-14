@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice For Exam</title>
+    <link rel="stylesheet" href="../CSS/style2.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+
+        <div class="logo">
+            <img src="../images/logo.png" alt="ExamPrep Logo">
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#modules">Modules</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header>
+
+        <div class="hero-text">
+
+            <h1>Practice For Your Exams</h1>
+
+            <p>
+                Welcome to ExamPrep, a modern quiz platform designed to help students
+                prepare for exams through interactive quizzes and practice questions.
+            </p>
+
+            <a href="#modules">
+                <button>Start Learning</button>
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+
+        <h2>About This Website</h2>
+
+        <p id="changing-text">
+            This website helps students revise and prepare for exams.
+        </p>
+
+    </section>
+
+    <!-- MODULES -->
+    <section class="modules" id="modules">
+
+        <h2>Available Modules</h2>
+
+        <div class="module-container">
+
+            <div class="module-card">
+                <h3>Mobile Computing</h3>
+                <p>Test your Mobile Computing knowledge and prepare for your exams.</p>
+                 <p style="color: green;">Good To Go!!</p>
+                <a href="HTML/mobileChapters.html">
+                    <button>Select Chapter</button>
+                </a>
+            </div>
+
+            <div class="module-card">
+                <h3>IVE</h3>
+                <p>Practice IVE concepts and prepare for your exams.</p>
+                <p style="color: green;">Good To Go!!</p>
+                <a href="HTML/iveChapters.html">
+                    <button>Select Chapter</button>
+                </a>
+            </div>
+
+            <div class="module-card">
+                <h3>Programming</h3>
+                <p>Improve your coding and programming skills.</p>
+                 <p style="color: red;">Still in progress</p>
+                
+                <a href="HTML/programming.html">
+                    <button>Select Chapter</button>
+                </a>
+            </div>
+
+            <div class="module-card">
+                <h3>Database</h3>
+                <p>Learn database concepts and SQL fundamentals.</p>
+                 <p style="color: red;">Still in progress</p>
+                <a href="HTML/database.html">
+                    <button>Select Chapter</button>
+                </a>
+            </div>
+
+            <div class="module-card">
+                <h3>Networking</h3>
+                <p>Understand networking devices and communication systems.</p>
+                <p style="color: red;">Still in progress</p>
+                <a href="networking.html">
+                    <button>Select Chapter</button>
+                </a>
+            </div>
+
+            <div class="module-card">
+                <h3>Web Development</h3>
+                <p>Practice HTML, CSS and JavaScript development skills.</p>
+                 <p style="color: red;">Still in progress</p>
+                <a href="HTML/webdevelopment.html">
+                    <button>Start Quiz</button>
+                </a>
+            </div>
+
+            <div class="module-card">
+                <h3>Operating Systems</h3>
+                <p>Learn about processes, memory and operating systems.</p>
+                 <p style="color: red;">Still in progress</p>
+                <a href="HTML/os.html">
+                    <button>Select Chapter</button>
+                </a>
+            </div>
+
+            <div class="module-card">
+                <h3>Cyber Security</h3>
+                <p>Practice security concepts and ethical hacking basics.</p>
+                 <p style="color: red;">Still in progress</p>
+                <a href="HTML/cybersecurity.html">
+                    <button>Select Chapter</button>
+                </a>
+            </div>
+
+             
+
+        </div>
+
+
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <p>© 2026 ExamPrep | Designed for students</p>
+    </footer>
+
+    <!-- JAVASCRIPT ANIMATION -->
+    <script>
+
+        let texts = [
+            "This website helps students revise and prepare for exams.",
+            "<span style='color: cyan'>Interactive quizzes improve understanding and confidence.</span>",
+            "<span style ='color:royalblue'>Choose different modules and test your knowledge easily.</span>",
+            "Practice regularly and improve your academic performance.</span>",
+            "<span style='color: cyan'>Learning becomes easier with fun interactive quizzes.</span>",
+            "<span style ='color:royalblue'>Created by students who understood the whole practice experience</span>"
+        ];
+
+        let index = 0;
+
+        function changeText() {
+            let textElement = document.getElementById("changing-text");
+            textElement.style.opacity = 0;
+
+            setTimeout(() => {
+                index++;
+                if (index >= texts.length) {
+                    index = 0;
+                }
+                textElement.innerHTML = texts[index];
+                textElement.style.opacity = 1;
+            }, 500);
+        }
+
+        setInterval(changeText, 3000);
+
+    </script>
+
+</body>
+
+</html>
