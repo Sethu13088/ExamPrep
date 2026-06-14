@@ -279,7 +279,7 @@ reasons[i].reason +
     <br>
 
     <div class="home-btn-container">
-       <a href="../ExamPrep.html">
+     <a href="../index.html">
             <button class="home-btn">
                 Go Back Home
             </button>
